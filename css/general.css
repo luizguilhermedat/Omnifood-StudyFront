@@ -1,0 +1,324 @@
+/*
+--- 01 SISTEMA DE TIPOGRAFIA
+
+- Tamanhos de fonte (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Pesos da fonte
+Padrão: 400
+Médio: 500
+Semibold: 600
+Negrito: 700
+
+- Alturas da linha
+Padrão: 1
+Pequena: 1.05
+Média: 1.2
+Padrão do parágrafo: 1.6
+Grande: 1.8
+
+- Espaçamento entre letras
+-0.5px
+0.75px
+
+--- 02 CORES
+
+- Primária: #e67e22
+- Matizes:
+#fdf2e9
+#fae5d3
+#eb984e
+
+- Sombras:
+#cf711f
+#45260a
+
+- Acentos:
+- Cinzas
+
+#888
+#767676 (cinza mais claro permitido em #fff)
+#6f6f6f (cinza mais claro permitido em #fdf2e9)
+#555
+#333
+
+--- 05 SOMBRAS
+
+0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+--- 06 RAIO DA BORDA
+
+Padrão: 9px
+Médio: 11px
+
+--- 07 ESPAÇO EM BRANCO
+
+- Sistema de espaçamento (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+* {
+  /* Aplica a todos os elementos */
+  padding: 0; /* Remove o preenchimento padrão */
+  margin: 0; /* Remove a margem padrão */
+  box-sizing: border-box; /* Inclui preenchimento e borda na largura e altura totais do elemento */
+}
+
+html {
+  /* Elemento raiz do documento */
+
+  /* font-size: 10px; */
+
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Porcentagem da configuração de tamanho de fonte do navegador do usuário */
+  font-size: 62.5%; /* Define o tamanho da fonte base para 62.5% do padrão (10px), facilitando o uso de rems */
+  overflow-x: hidden; /* Esconde o overflow horizontal */
+
+  /* Não funciona no Safari */
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  /* Corpo do documento */
+  font-family: "Rubik", sans-serif; /* Define a fonte para Rubik */
+  line-height: 1; /* Define a altura da linha para 1 */
+  font-weight: 400; /* Define o peso da fonte para normal (400) */
+  color: #555; /* Define a cor do texto para um cinza escuro */
+
+  /* Só funciona se não houver nada absolutamente posicionado em relação ao body */
+  overflow-x: hidden; /* Esconde o overflow horizontal */
+}
+
+/**************************/
+/* COMPONENTES REUTILIZÁVEIS GERAIS */
+/**************************/
+
+.container {
+  /* 1140px */
+  max-width: 120rem; /* Define a largura máxima do container */
+  padding: 0 3.2rem; /* Define o preenchimento horizontal */
+  margin: 0 auto; /* Centraliza o container horizontalmente */
+}
+
+.grid {
+  /* Define um layout de grid */
+  display: grid; /* Usa o display grid */
+  column-gap: 6.4rem; /* Define o espaçamento entre as colunas */
+  row-gap: 9.6rem; /* Define o espaçamento entre as linhas */
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child {
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  /* Aplica a todos os grids, exceto o último */
+  margin-bottom: 9.6rem; /* Adiciona uma margem inferior */
+}
+
+.grid--2-cols {
+  /* Grid com 2 colunas */
+  grid-template-columns: repeat(2, 1fr); /* Define 2 colunas de igual largura */
+}
+
+.grid--3-cols {
+  /* Grid com 3 colunas */
+  grid-template-columns: repeat(3, 1fr); /* Define 3 colunas de igual largura */
+}
+
+.grid--4-cols {
+  /* Grid com 4 colunas */
+  grid-template-columns: repeat(4, 1fr); /* Define 4 colunas de igual largura */
+}
+
+/* .grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+} */
+
+.grid--center-v {
+  /* Centraliza verticalmente os itens do grid */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+}
+
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  /* Estilos comuns para títulos */
+  font-weight: 700; /* Define o peso da fonte para negrito */
+  color: #333; /* Define a cor do texto para um cinza escuro */
+  /* color: #45260a; */
+  /* color: #343a40; */
+  letter-spacing: -0.5px; /* Reduz o espaçamento entre as letras */
+}
+
+.heading-primary {
+  /* Título principal */
+  font-size: 5.2rem; /* Define o tamanho da fonte */
+  line-height: 1.05; /* Define a altura da linha */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior */
+}
+
+.heading-secondary {
+  /* Título secundário */
+  font-size: 4.4rem; /* Define o tamanho da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  margin-bottom: 9.6rem; /* Adiciona uma margem inferior */
+}
+
+.heading-tertiary {
+  /* Título terciário */
+  font-size: 3rem; /* Define o tamanho da fonte */
+  line-height: 1.2; /* Define a altura da linha */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior */
+}
+
+.subheading {
+  /* Subtítulo */
+  display: block; /* Exibe como bloco */
+  font-size: 1.6rem; /* Define o tamanho da fonte */
+  font-weight: 500; /* Define o peso da fonte para médio */
+  color: #cf711f; /* Define a cor do texto */
+  text-transform: uppercase; /* Transforma o texto em maiúsculas */
+  margin-bottom: 1.6rem; /* Adiciona uma margem inferior */
+  letter-spacing: 0.75px; /* Aumenta o espaçamento entre as letras */
+}
+
+.btn,
+.btn:link,
+.btn:visited {
+  /* Estilos comuns para botões */
+  display: inline-block; /* Exibe como bloco inline */
+
+  text-decoration: none; /* Remove o sublinhado padrão */
+  font-size: 2rem; /* Define o tamanho da fonte */
+  font-weight: 600; /* Define o peso da fonte para semibold */
+  padding: 1.6rem 3.2rem; /* Define o preenchimento */
+  border-radius: 9px; /* Define o raio da borda */
+
+  /* Só necessário para .btn */
+  border: none; /* Remove a borda */
+  cursor: pointer; /* Define o cursor como ponteiro */
+  font-family: inherit; /* Herda a fonte do elemento pai */
+
+  /* Coloca a transição no "estado" original */
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+.btn--full:link,
+.btn--full:visited {
+  /* Botão preenchido */
+  background-color: #e67e22; /* Define a cor de fundo */
+  color: #fff; /* Define a cor do texto */
+}
+
+.btn--full:hover,
+.btn--full:active {
+  /* Botão preenchido (hover e active) */
+  background-color: #cf711f; /* Define a cor de fundo */
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+  /* Botão com contorno */
+  background-color: #fff; /* Define a cor de fundo */
+  color: #555; /* Define a cor do texto */
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+  /* Botão com contorno (hover e active) */
+  background-color: #fdf2e9; /* Define a cor de fundo */
+
+  /* border: 3px solid #fff; */
+
+  /* Truque para adicionar borda interna */
+  box-shadow: inset 0 0 0 3px #fff; /* Adiciona uma sombra interna para simular uma borda */
+}
+
+.btn--form {
+  /* Botão de formulário */
+  background-color: #45260a; /* Define a cor de fundo */
+  color: #fdf2e9; /* Define a cor do texto */
+  align-self: end; /* Alinha o botão ao final do container */
+  padding: 1.2rem; /* Define o preenchimento */
+}
+
+.btn--form:hover {
+  /* Botão de formulário (hover) */
+  background-color: #fff; /* Define a cor de fundo */
+  color: #555; /* Define a cor do texto */
+}
+
+.link:link,
+.link:visited {
+  /* Link */
+  display: inline-block; /* Exibe como bloco inline */
+  color: #e67e22; /* Define a cor do texto */
+  text-decoration: none; /* Remove o sublinhado padrão */
+  border-bottom: 1px solid currentColor; /* Adiciona uma borda inferior */
+  padding-bottom: 2px; /* Define o preenchimento inferior */
+  transition: all 0.3s; /* Adiciona uma transição suave para todas as propriedades */
+}
+
+.link:hover,
+.link:active {
+  /* Link (hover e active) */
+  color: #cf711f; /* Define a cor do texto */
+  border-bottom: 1px solid transparent; /* Remove a borda inferior */
+}
+
+.list {
+  /* Lista */
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Usa o display flex */
+  flex-direction: column; /* Define a direção do flex como coluna */
+  gap: 1.6rem; /* Define o espaçamento entre os itens */
+}
+
+.list-item {
+  /* Item da lista */
+  font-size: 1.8rem; /* Define o tamanho da fonte */
+  display: flex; /* Usa o display flex */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 1.6rem; /* Define o espaçamento entre os itens */
+  line-height: 1.2; /* Define a altura da linha */
+}
+
+.list-icon {
+  /* Ícone da lista */
+  width: 3rem; /* Define a largura */
+  height: 3rem; /* Define a altura */
+  color: #e67e22; /* Define a cor */
+}
+
+*:focus {
+  /* Estilo para o foco */
+  outline: none; /* Remove o contorno padrão */
+  /* outline: 4px dotted #e67e22; */
+  /* outline-offset: 8px; */
+  box-shadow: 0 0 0 0.8rem rgba(230, 125, 34, 0.5); /* Adiciona uma sombra para indicar o foco */
+}
+
+/* CLASSES AUXILIARES/DE CONFIGURAÇÃO */
+.margin-right-sm {
+  /* Margem direita pequena */
+  margin-right: 1.6rem !important; /* Define a margem direita */
+}
+
+.margin-bottom-md {
+  /* Margem inferior média */
+  margin-bottom: 4.8rem !important; /* Define a margem inferior */
+}
+
+.center-text {
+  /* Texto centralizado */
+  text-align: center; /* Centraliza o texto */
+}
+
+strong {
+  /* Texto em negrito */
+  font-weight: 500; /* Define o peso da fonte */
+}

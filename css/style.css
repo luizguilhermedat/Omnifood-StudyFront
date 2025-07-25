@@ -1,0 +1,681 @@
+/**************************/
+/* HEADER */
+/**************************/
+
+.header {
+  display: flex; /* Define o tipo de display como flexbox, permitindo o alinhamento e distribuição de elementos */
+  justify-content: space-between; /* Alinha os itens horizontalmente, com espaço entre eles */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  background-color: #fdf2e9; /* Define a cor de fundo do cabeçalho */
+
+  /* Because we want header to be sticky later */
+  height: 9.6rem; /* Define a altura do cabeçalho */
+  padding: 0 4.8rem; /* Define o preenchimento superior/inferior como 0 e o preenchimento esquerdo/direito como 4.8rem */
+  position: relative; /* Define a posição como relativa, permitindo o posicionamento absoluto de elementos filhos */
+}
+
+.logo {
+  height: 2.2rem; /* Define a altura da logo */
+}
+
+/**************************/
+/* NAVIGATION */
+/**************************/
+
+.main-nav-list {
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Define o tipo de display como flexbox para a lista de navegação principal */
+  align-items: center; /* Alinha os itens da lista verticalmente ao centro */
+  gap: 4.8rem; /* Define um espaço de 4.8rem entre os itens da lista */
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block; /* Exibe os links como blocos inline, permitindo o preenchimento e a borda */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: #333; /* Define a cor do texto dos links */
+  font-weight: 500; /* Define o peso da fonte como 500 (normal) */
+  font-size: 1.8rem; /* Define o tamanho da fonte como 1.8rem */
+  transition: all 0.3s; /* Adiciona uma transição suave para todas as propriedades em 0.3 segundos */
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #cf711f; /* Altera a cor do texto dos links ao passar o mouse ou ao clicar */
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem; /* Define o preenchimento interno como 1.2rem verticalmente e 2.4rem horizontalmente */
+  border-radius: 9px; /* Arredonda os cantos do botão de chamada para ação */
+  color: #fff; /* Define a cor do texto como branco */
+  background-color: #e67e22; /* Define a cor de fundo como laranja */
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #cf711f; /* Altera a cor de fundo ao passar o mouse ou ao clicar */
+}
+
+/* MOBILE */
+.btn-mobile-nav {
+  border: none; /* Remove a borda do botão de navegação móvel */
+  background: none; /* Remove o fundo do botão de navegação móvel */
+  cursor: pointer; /* Altera o cursor para uma mão ao passar sobre o botão */
+
+  display: none; /* Esconde o botão de navegação móvel por padrão */
+}
+
+.icon-mobile-nav {
+  height: 4.8rem; /* Define a altura do ícone de navegação móvel */
+  width: 4.8rem; /* Define a largura do ícone de navegação móvel */
+  color: #333; /* Define a cor do ícone de navegação móvel */
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none; /* Esconde o ícone de fechar por padrão */
+}
+
+/* STICKY NAVIGATION */
+.sticky .header {
+  position: fixed; /* Define a posição como fixa, para o cabeçalho grudar no topo ao rolar */
+  top: 0; /* Alinha o cabeçalho ao topo da página */
+  bottom: 0; /* Alinha o cabeçalho à parte inferior da página */
+  width: 100%; /* Define a largura como 100% da tela */
+  height: 8rem; /* Define a altura do cabeçalho como 8rem */
+  padding-top: 0; /* Remove o preenchimento superior */
+  padding-bottom: 0; /* Remove o preenchimento inferior */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.97
+  ); /* Define uma cor de fundo branca semi-transparente */
+  z-index: 999; /* Define um índice z alto para sobrepor outros elementos */
+  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03); /* Adiciona uma sombra sutil ao cabeçalho */
+}
+
+.sticky .section-hero {
+  margin-top: 9.6rem; /* Adiciona uma margem superior à seção hero quando o cabeçalho está fixo */
+}
+
+/**************************/
+/* HERO SECTION */
+/**************************/
+
+.section-hero {
+  background-color: #fdf2e9; /* Define a cor de fundo da seção hero */
+  padding: 4.8rem 0 9.6rem 0; /* Define o preenchimento superior como 4.8rem, inferior como 9.6rem e laterais como 0 */
+}
+
+.hero {
+  max-width: 130rem; /* Define a largura máxima da seção hero */
+  margin: 0 auto; /* Centraliza a seção hero horizontalmente */
+  padding: 0 3.2rem; /* Define o preenchimento lateral como 3.2rem */
+  display: grid; /* Define o tipo de display como grid para a seção hero */
+  grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+  gap: 9.6rem; /* Define um espaço de 9.6rem entre as colunas */
+  align-items: center; /* Alinha os itens da grid verticalmente ao centro */
+}
+
+.hero-description {
+  font-size: 2rem; /* Define o tamanho da fonte da descrição da hero como 2rem */
+  line-height: 1.6; /* Define a altura da linha da descrição da hero */
+  margin-bottom: 4.8rem; /* Adiciona uma margem inferior de 4.8rem */
+}
+
+.hero-img {
+  width: 100%; /* Define a largura da imagem da hero como 100% do contêiner pai */
+}
+
+.delivered-meals {
+  display: flex; /* Define o tipo de display como flexbox para a seção de refeições entregues */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 1.6rem; /* Define um espaço de 1.6rem entre os itens */
+  margin-top: 8rem; /* Adiciona uma margem superior de 8rem */
+}
+
+.delivered-imgs {
+  display: flex; /* Define o tipo de display como flexbox para os ícones de refeições entregues */
+}
+
+.delivered-imgs img {
+  height: 4.8rem; /* Define a altura das imagens de refeições entregues */
+  width: 4.8rem; /* Define a largura das imagens de refeições entregues */
+  border-radius: 50%; /* Arredonda as imagens para ficarem circulares */
+  margin-right: -1.6rem; /* Adiciona uma margem negativa à direita para sobreposição */
+  border: 3px solid #fdf2e9; /* Adiciona uma borda branca às imagens */
+}
+
+.delivered-imgs img:last-child {
+  margin: 0; /* Remove a margem do último ícone de refeição entregue */
+}
+
+.delivered-text {
+  font-size: 1.8rem; /* Define o tamanho da fonte do texto de refeições entregues como 1.8rem */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+}
+
+.delivered-text span {
+  color: #cf711f; /* Altera a cor do texto para laranja */
+  font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+}
+
+/**************************/
+/* FEATURED IN SECTION */
+/**************************/
+
+.section-featured {
+  padding: 4.8rem 0 3.2rem 0; /* Define o preenchimento superior como 4.8rem, inferior como 3.2rem e laterais como 0 */
+}
+
+.heading-featured-in {
+  font-size: 1.4rem; /* Define o tamanho da fonte do cabeçalho da seção como 1.4rem */
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+  letter-spacing: 0.75px; /* Adiciona um espaçamento entre as letras */
+  font-weight: 500; /* Define o peso da fonte como 500 (normal) */
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 2.4rem; /* Adiciona uma margem inferior de 2.4rem */
+  color: #888; /* Define a cor do texto como cinza claro */
+}
+
+.logos {
+  display: flex; /* Define o tipo de display como flexbox para a seção de logos */
+  justify-content: space-around; /* Distribui os logos com espaço ao redor */
+}
+
+.logos img {
+  height: 3.2rem; /* Define a altura das imagens dos logos */
+  filter: brightness(0); /* Remove a cor das imagens, tornando-as pretas */
+  opacity: 50%; /* Define a opacidade das imagens como 50% */
+}
+
+/**************************/
+/* HOW IT WORKS SECTION */
+/**************************/
+
+.section-how {
+  padding: 9.6rem 0; /* Define o preenchimento superior como 9.6rem e inferior como 0 */
+}
+
+.step-number {
+  font-size: 8.6rem; /* Define o tamanho da fonte do número da etapa como 8.6rem */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+  color: #ddd; /* Define a cor do texto como cinza claro */
+  margin-bottom: 1.2rem; /* Adiciona uma margem inferior de 1.2rem */
+}
+
+.step-description {
+  font-size: 1.8rem; /* Define o tamanho da fonte da descrição da etapa como 1.8rem */
+  line-height: 1.8; /* Define a altura da linha da descrição da etapa */
+}
+
+.step-img-box {
+  position: relative; /* Define a posição como relativa, permitindo o posicionamento absoluto de elementos filhos */
+
+  display: flex; /* Define o tipo de display como flexbox para a caixa da imagem da etapa */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Alinha os itens horizontalmente ao centro */
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: ""; /* Necessário para o uso de pseudo-elementos */
+  display: block; /* Exibe os pseudo-elementos como blocos */
+  border-radius: 50%; /* Arredonda os pseudo-elementos para ficarem circulares */
+  position: absolute; /* Define a posição como absoluta em relação ao pai */
+  top: 50%; /* Alinha os pseudo-elementos verticalmente ao centro */
+  left: 50%; /* Alinha os pseudo-elementos horizontalmente ao centro */
+  transform: translate(-50%, -50%); /* Centraliza os pseudo-elementos */
+}
+
+.step-img-box::before {
+  width: 60%; /* Define a largura do pseudo-elemento antes como 60% do pai */
+  /* height: 60%; */
+
+  /* 60% of parent's width */
+  padding-bottom: 60%; /* Define a altura do pseudo-elemento antes como 60% da largura do pai */
+
+  background-color: #fdf2e9; /* Define a cor de fundo do pseudo-elemento antes */
+  z-index: -2; /* Coloca o pseudo-elemento antes atrás de outros elementos */
+}
+
+.step-img-box::after {
+  width: 45%; /* Define a largura do pseudo-elemento depois como 45% do pai */
+  padding-bottom: 45%; /* Define a altura do pseudo-elemento depois como 45% da largura do pai */
+  background-color: #fae5d3; /* Define a cor de fundo do pseudo-elemento depois */
+  z-index: -1; /* Coloca o pseudo-elemento depois atrás de outros elementos, mas na frente do pseudo-elemento antes */
+}
+
+.step-img {
+  width: 35%; /* Define a largura da imagem da etapa como 35% do pai */
+  /* z-index: 10; */
+}
+
+/**************************/
+/* MEALS SECTION */
+/**************************/
+
+.section-meals {
+  padding: 9.6rem 0; /* Define o preenchimento superior como 9.6rem e inferior como 0 */
+}
+
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075); /* Adiciona uma sombra suave ao redor do cartão da refeição */
+  border-radius: 11px; /* Arredonda os cantos do cartão da refeição */
+  overflow: hidden; /* Esconde o conteúdo que transborda do cartão da refeição */
+  transition: all 0.4s; /* Adiciona uma transição suave para todas as propriedades em 0.4 segundos */
+}
+
+.meal:hover {
+  transform: translateY(
+    -1.2rem
+  ); /* Move o cartão da refeição para cima ao passar o mouse */
+  box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06); /* Aumenta a sombra ao passar o mouse */
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem; /* Define o preenchimento interno do conteúdo da refeição */
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem; /* Adiciona uma margem inferior de 1.2rem */
+  display: flex; /* Define o tipo de display como flexbox para os tags da refeição */
+  gap: 0.4rem; /* Define um espaço de 0.4rem entre os tags */
+}
+
+.tag {
+  display: inline-block; /* Exibe os tags como blocos inline, permitindo o preenchimento e a borda */
+  padding: 0.4rem 0.8rem; /* Define o preenchimento interno dos tags */
+  font-size: 1.2rem; /* Define o tamanho da fonte dos tags como 1.2rem */
+  text-transform: uppercase; /* Transforma o texto dos tags para maiúsculas */
+  color: #333; /* Define a cor do texto dos tags */
+  border-radius: 100px; /* Arredonda os cantos dos tags para ficarem circulares */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+}
+
+.tag--vegetarian {
+  background-color: #51cf66; /* Define a cor de fundo dos tags vegetarianos */
+}
+.tag--vegan {
+  background-color: #94d82d; /* Define a cor de fundo dos tags veganos */
+}
+.tag--paleo {
+  background-color: #ffd43b; /* Define a cor de fundo dos tags paleo */
+}
+
+.meal-title {
+  font-size: 2.4rem; /* Define o tamanho da fonte do título da refeição como 2.4rem */
+  color: #333; /* Define a cor do texto do título da refeição */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior de 3.2rem */
+}
+
+.meal-attributes {
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Define o tipo de display como flexbox para os atributos da refeição */
+  flex-direction: column; /* Alinha os atributos em uma coluna */
+  gap: 2rem; /* Define um espaço de 2rem entre os atributos */
+}
+
+.meal-attribute {
+  font-size: 1.8rem; /* Define o tamanho da fonte do atributo da refeição como 1.8rem */
+  display: flex; /* Define o tipo de display como flexbox para o atributo da refeição */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  gap: 1.6rem; /* Define um espaço de 1.6rem entre os itens */
+}
+
+.meal-icon {
+  height: 2.4rem; /* Define a altura do ícone da refeição */
+  width: 2.4rem; /* Define a largura do ícone da refeição */
+  color: #e67e22; /* Define a cor do ícone da refeição */
+}
+
+.meal-img {
+  width: 100%; /* Define a largura da imagem da refeição como 100% do contêiner pai */
+}
+
+.all-recipes {
+  text-align: center; /* Centraliza o texto */
+  font-size: 1.8rem; /* Define o tamanho da fonte como 1.8rem */
+}
+
+/**************************/
+/* TESTIMONIALS SECTION */
+/**************************/
+
+.section-testimonials {
+  background-color: #fdf2e9; /* Define a cor de fundo da seção de depoimentos */
+  display: grid; /* Define o tipo de display como grid para a seção de depoimentos */
+  grid-template-columns: 55fr 45fr; /* Define duas colunas com proporções 55:45 */
+  align-items: center; /* Alinha os itens da grid verticalmente ao centro */
+}
+
+.testimonials-container {
+  padding: 9.6rem; /* Define o preenchimento interno da caixa de depoimentos */
+}
+
+.testimonials {
+  display: grid; /* Define o tipo de display como grid para os depoimentos */
+  grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+  row-gap: 4.8rem; /* Define um espaço de 4.8rem entre as linhas */
+  column-gap: 8rem; /* Define um espaço de 8rem entre as colunas */
+}
+
+.testimonial-img {
+  width: 6.4rem; /* Define a largura da imagem do depoimento */
+  border-radius: 50%; /* Arredonda a imagem do depoimento para ficar circular */
+  margin-bottom: 1.2rem; /* Adiciona uma margem inferior de 1.2rem */
+}
+
+.testimonial-text {
+  font-size: 1.8rem; /* Define o tamanho da fonte do texto do depoimento como 1.8rem */
+  line-height: 1.8; /* Define a altura da linha do texto do depoimento */
+  margin-bottom: 1.6rem; /* Adiciona uma margem inferior de 1.6rem */
+}
+
+.testimonial-name {
+  font-size: 1.6rem; /* Define o tamanho da fonte do nome do depoimento como 1.6rem */
+  color: #6f6f6f; /* Define a cor do texto do nome do depoimento */
+}
+
+.gallery {
+  display: grid; /* Define o tipo de display como grid para a galeria */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Define três colunas de tamanhos iguais */
+  gap: 1.6rem; /* Define um espaço de 1.6rem entre os itens da galeria */
+  padding: 1.6rem; /* Adiciona um preenchimento interno de 1.6rem à galeria */
+}
+
+.gallery-item {
+  overflow: hidden; /* Esconde o conteúdo que transborda do item da galeria */
+}
+
+.gallery-item img {
+  display: block; /* Exibe a imagem como um bloco */
+  width: 100%; /* Define a largura da imagem como 100% do contêiner pai */
+  transition: all 0.4s; /* Adiciona uma transição suave para todas as propriedades em 0.4 segundos */
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1); /* Aumenta a imagem ao passar o mouse */
+}
+
+/**************************/
+/* MEALS SECTION */
+/**************************/
+
+.section-pricing {
+  padding: 9.6rem 0; /* Define o preenchimento superior como 9.6rem e inferior como 0 */
+}
+
+.pricing-plan {
+  border-radius: 11px; /* Arredonda os cantos do plano de preços */
+
+  width: 75%; /* Define a largura do plano de preços como 75% do contêiner pai */
+}
+
+.pricing-plan--starter {
+  justify-self: end; /* Alinha o plano de preços inicial ao final do contêiner pai */
+  border: 2px solid #fdf2e9; /* Adiciona uma borda ao plano de preços inicial */
+  padding: 4.6rem; /* Define o preenchimento interno do plano de preços inicial */
+}
+
+.pricing-plan--complete {
+  background-color: #fdf2e9; /* Define a cor de fundo do plano de preços completo */
+  padding: 4.8rem; /* Define o preenchimento interno do plano de preços completo */
+  position: relative; /* Define a posição como relativa, permitindo o posicionamento absoluto de elementos filhos */
+  overflow: hidden; /* Esconde o conteúdo que transborda do plano de preços completo */
+}
+
+.pricing-plan--complete::after {
+  content: "Best value"; /* Adiciona um texto após o plano de preços completo */
+  position: absolute; /* Define a posição como absoluta em relação ao pai */
+  top: 6%; /* Alinha o texto ao topo do plano de preços completo */
+  right: -18%; /* Alinha o texto à direita do plano de preços completo */
+
+  text-transform: uppercase; /* Transforma o texto para maiúsculas */
+  font-size: 1.4rem; /* Define o tamanho da fonte do texto como 1.4rem */
+  font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+  color: #333; /* Define a cor do texto como #333 */
+  background-color: #ffd43b; /* Define a cor de fundo do texto como amarelo */
+  padding: 0.8rem 8rem; /* Define o preenchimento interno do texto */
+  transform: rotate(45deg); /* Rotaciona o texto em 45 graus */
+}
+
+.plan-header {
+  text-align: center; /* Centraliza o texto do cabeçalho do plano */
+  margin-bottom: 4.8rem; /* Adiciona uma margem inferior de 4.8rem */
+}
+
+.plan-name {
+  color: #cf711f; /* Define a cor do texto do nome do plano como laranja */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+  font-size: 2rem; /* Define o tamanho da fonte do nome do plano como 2rem */
+  text-transform: uppercase; /* Transforma o texto do nome do plano para maiúsculas */
+  letter-spacing: 0.75; /* Adiciona um espaçamento entre as letras do nome do plano */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior de 3.2rem */
+}
+
+.plan-price {
+  font-size: 6.2rem; /* Define o tamanho da fonte do preço do plano como 6.2rem */
+  font-weight: 600; /* Define o peso da fonte como 600 (semi-negrito) */
+  color: #333; /* Define a cor do texto do preço do plano */
+  margin-bottom: 1.6rem; /* Adiciona uma margem inferior de 1.6rem */
+}
+
+.plan-price span {
+  font-size: 3rem; /* Define o tamanho da fonte do símbolo da moeda como 3rem */
+  font-weight: 500; /* Define o peso da fonte como 500 (normal) */
+  margin-right: 0.8rem; /* Adiciona uma margem direita de 0.8rem */
+}
+
+.plan-text {
+  font-size: 1.6rem; /* Define o tamanho da fonte do texto do plano como 1.6rem */
+  line-height: 1.6; /* Define a altura da linha do texto do plano */
+  color: #6f6f6f; /* Define a cor do texto do plano como cinza */
+}
+
+.plan-sing-up {
+  text-align: center; /* Centraliza o texto da seção de inscrição do plano */
+  margin-top: 4.8rem; /* Adiciona uma margem superior de 4.8rem */
+}
+
+.plan-details {
+  font-size: 1.6rem; /* Define o tamanho da fonte dos detalhes do plano como 1.6rem */
+  line-height: 1.6; /* Define a altura da linha dos detalhes do plano */
+  text-align: center; /* Centraliza o texto dos detalhes do plano */
+}
+
+.feature-icon {
+  color: #e67e22; /* Define a cor do ícone da característica como laranja */
+  height: 3.2rem; /* Define a altura do ícone da característica */
+  width: 3.2rem; /* Define a largura do ícone da característica */
+  background-color: #fdf2e9; /* Define a cor de fundo do ícone da característica */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior de 3.2rem */
+  padding: 1.6rem; /* Define o preenchimento interno do ícone da característica */
+  border-radius: 50%; /* Arredonda os cantos do ícone da característica para ficarem circulares */
+}
+
+.feature-title {
+  font-size: 2.4rem; /* Define o tamanho da fonte do título da característica como 2.4rem */
+  color: #333; /* Define a cor do texto do título da característica */
+  font-weight: 700; /* Define o peso da fonte como 700 (negrito) */
+  margin-bottom: 1.6rem; /* Adiciona uma margem inferior de 1.6rem */
+}
+
+.feature-text {
+  font-size: 1.8rem; /* Define o tamanho da fonte do texto da característica como 1.8rem */
+  line-height: 1.8; /* Define a altura da linha do texto da característica */
+}
+
+/**************************/
+/* CTA SECTION */
+/**************************/
+
+.section-cta {
+  /* top / right / bottom / left */
+  /* padding: 9.6rem 0 12.8rem 0; */
+
+  /* top / horizontal / left */
+  padding: 4.8rem 0 12.8rem;
+}
+
+.cta {
+  display: grid; /* Define o tipo de display como grid para a seção de chamada para ação */
+  /* 2/3 = 66.6% + 1/3 = 33.3% */
+  grid-template-columns: 2fr 1fr; /* Define duas colunas, sendo a primeira duas vezes maior que a segunda */
+  /* background-color: #e67e22; */
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15); /* Adiciona uma sombra ao redor da seção de chamada para ação */
+  border-radius: 11px; /* Arredonda os cantos da seção de chamada para ação */
+
+  background-image: linear-gradient(
+    to right bottom,
+    #eb984e,
+    #e67e22
+  ); /* Adiciona um gradiente de fundo */
+  overflow: hidden; /* Esconde o conteúdo que transborda da seção de chamada para ação */
+}
+
+.cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem; /* Define o preenchimento interno da caixa de texto da chamada para ação */
+  color: #45260a; /* Define a cor do texto da caixa de texto da chamada para ação */
+}
+
+.cta .heading-secondary {
+  /* color: #45260a; */
+  color: inherit; /* Herda a cor do elemento pai */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior de 3.2rem */
+}
+
+.cta-text {
+  font-size: 1.8rem; /* Define o tamanho da fonte do texto da chamada para ação como 1.8rem */
+  line-height: 1.8; /* Define a altura da linha do texto da chamada para ação */
+  margin-bottom: 4.8rem; /* Adiciona uma margem inferior de 4.8rem */
+}
+
+.cta-img-box {
+  background-image: linear-gradient(
+      to right bottom,
+      rgba(235, 151, 78, 0.35),
+      rgba(230, 125, 34, 0.35)
+    ),
+    url("../img/eating.jpg"); /* Adiciona uma imagem de fundo com gradiente */
+  background-size: cover; /* Cobre todo o espaço da caixa da imagem */
+  background-position: center; /* Centraliza a imagem de fundo */
+}
+
+.cta-form {
+  display: grid; /* Define o tipo de display como grid para o formulário da chamada para ação */
+  grid-template-columns: 1fr 1fr; /* Define duas colunas de tamanhos iguais */
+  column-gap: 3.2rem; /* Define um espaço de 3.2rem entre as colunas */
+  row-gap: 2.4rem; /* Define um espaço de 2.4rem entre as linhas */
+}
+
+.cta-form label {
+  display: block; /* Exibe os rótulos como blocos, ocupando toda a largura disponível */
+  font-size: 1.6rem; /* Define o tamanho da fonte dos rótulos como 1.6rem */
+  font-weight: 500; /* Define o peso da fonte como 500 (normal) */
+  margin-bottom: 1.2rem; /* Adiciona uma margem inferior de 1.2rem */
+}
+
+.cta-form input,
+.cta-form select {
+  width: 100%; /* Define a largura dos campos de entrada e seleção como 100% do contêiner pai */
+  padding: 1.2rem; /* Define o preenchimento interno dos campos de entrada e seleção */
+  font-size: 1.8rem; /* Define o tamanho da fonte dos campos de entrada e seleção como 1.8rem */
+  font-family: inherit; /* Herda a família da fonte do elemento pai */
+  color: inherit; /* Herda a cor do texto do elemento pai */
+  border: none; /* Remove a borda dos campos de entrada e seleção */
+  background-color: #fdf2e9; /* Define a cor de fundo dos campos de entrada e seleção */
+  border-radius: 9px; /* Arredonda os cantos dos campos de entrada e seleção */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra sutil aos campos de entrada e seleção */
+}
+
+.cta-form input::placeholder {
+  color: #aaa; /* Define a cor do texto do placeholder como cinza claro */
+}
+
+.cta *:focus {
+  outline: none; /* Remove o contorno padrão ao focar em um elemento */
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5); /* Adiciona uma sombra ao redor do elemento ao receber foco */
+}
+
+/**************************/
+/* FOOTER */
+/**************************/
+
+.footer {
+  padding: 12.8rem 0; /* Define o preenchimento superior como 12.8rem e inferior como 0 */
+  border-top: 1px solid #eee; /* Adiciona uma borda superior ao rodapé */
+}
+
+.grid--footer {
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr; /* Define as colunas da grid do rodapé */
+}
+
+.logo-col {
+  display: flex; /* Define o tipo de display como flexbox para a coluna da logo */
+  flex-direction: column; /* Alinha os itens em uma coluna */
+}
+
+.footer-logo {
+  display: block; /* Exibe a logo como um bloco */
+  margin-bottom: 3.2rem; /* Adiciona uma margem inferior de 3.2rem */
+}
+
+.social-links {
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Define o tipo de display como flexbox para os links sociais */
+  gap: 2.4rem; /* Define um espaço de 2.4rem entre os ícones sociais */
+}
+
+.social-icon {
+  height: 2.4rem; /* Define a altura dos ícones sociais */
+  width: 2.4rem; /* Define a largura dos ícones sociais */
+}
+
+.copyright {
+  font-size: 1.4rem; /* Define o tamanho da fonte do texto de copyright como 1.4rem */
+  line-height: 1.6; /* Define a altura da linha do texto de copyright */
+  color: #767676; /* Define a cor do texto de copyright como cinza */
+  margin-top: auto; /* Empurra o texto de copyright para o final da coluna */
+}
+
+.footer-heading {
+  font-size: 1.8rem; /* Define o tamanho da fonte do cabeçalho do rodapé como 1.8rem */
+  font-weight: 500; /* Define o peso da fonte como 500 (normal) */
+  margin-bottom: 4rem; /* Adiciona uma margem inferior de 4rem */
+}
+
+.contacts {
+  font-style: normal; /* Define o estilo da fonte como normal */
+  font-size: 1.6rem; /* Define o tamanho da fonte das informações de contato como 1.6rem */
+  line-height: 1.6; /* Define a altura da linha das informações de contato */
+}
+
+.address {
+  margin-bottom: 2.4rem; /* Adiciona uma margem inferior de 2.4rem */
+}
+
+.footer-nav {
+  list-style: none; /* Remove os marcadores de lista */
+  display: flex; /* Define o tipo de display como flexbox para a navegação do rodapé */
+  flex-direction: column; /* Alinha os itens em uma coluna */
+  gap: 2.4rem; /* Define um espaço de 2.4rem entre os itens */
+}
+
+.footer-link:link,
+.footer-link:visited {
+  text-decoration: none; /* Remove o sublinhado dos links do rodapé */
+  font-size: 1.6rem; /* Define o tamanho da fonte dos links do rodapé como 1.6rem */
+  color: #767676; /* Define a cor do texto dos links do rodapé como cinza */
+  transition: all 0.3s; /* Adiciona uma transição suave para todas as propriedades em 0.3 segundos */
+}
+
+.footer-link:hover,
+.footer-link:active {
+  color: #555; /* Altera a cor do texto dos links do rodapé ao passar o mouse ou ao clicar */
+}

@@ -1,0 +1,448 @@
+/* *rem e em NÃO dependem do font-size do html em media queries! Em vez disso, 1rem = 1em = 16px */
+
+/**************************/
+/* ABAIXO DE 1344px (Desktops menores) */
+/**************************/
+
+@media (max-width: 84em) {
+  /* Aplica estilos quando a largura máxima da tela for 84em (1344px) */
+  .hero {
+    /* Seletor para a classe 'hero' */
+    max-width: 120rem; /* Define a largura máxima do elemento 'hero' como 120rem */
+  }
+
+  .heading-primary {
+    /* Seletor para a classe 'heading-primary' */
+    font-size: 4.4rem; /* Define o tamanho da fonte do título primário como 4.4rem */
+  }
+
+  .gallery {
+    /* Seletor para a classe 'gallery' */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Define o layout da galeria com 2 colunas de igual largura */
+  }
+}
+
+/**************************/
+/* ABAIXO DE 1200px (Tablets na horizontal) */
+/**************************/
+
+@media (max-width: 75em) {
+  /* Aplica estilos quando a largura máxima da tela for 75em (1200px) */
+  html {
+    /* Seletor para o elemento 'html' */
+    /* 9px / 16px */
+    font-size: 56.25%; /* Define o tamanho da fonte base do HTML como 56.25% (9px), usado para cálculos de rem */
+  }
+
+  .grid {
+    /* Seletor para a classe 'grid' */
+    column-gap: 4.8rem; /* Define o espaçamento entre as colunas da grid como 4.8rem */
+    row-gap: 6.4rem; /* Define o espaçamento entre as linhas da grid como 6.4rem */
+  }
+
+  .heading-secondary {
+    /* Seletor para a classe 'heading-secondary' */
+    font-size: 3.6rem; /* Define o tamanho da fonte do título secundário como 3.6rem */
+  }
+
+  .heading-tertiary {
+    /* Seletor para a classe 'heading-tertiary' */
+    font-size: 2.4rem; /* Define o tamanho da fonte do título terciário como 2.4rem */
+  }
+
+  .header {
+    /* Seletor para a classe 'header' */
+    padding: 0 3.2rem; /* Define o preenchimento superior/inferior como 0 e o preenchimento esquerdo/direito como 3.2rem */
+  }
+
+  .main-nav-list {
+    /* Seletor para a classe 'main-nav-list' */
+    gap: 3.2rem; /* Define o espaçamento entre os itens da lista de navegação principal como 3.2rem */
+  }
+
+  .hero {
+    /* Seletor para a classe 'hero' */
+    gap: 4.8rem; /* Define o espaçamento entre os elementos dentro do 'hero' como 4.8rem */
+  }
+
+  .testimonials-container {
+    /* Seletor para a classe 'testimonials-container' */
+    padding: 9.6rem 3.2rem; /* Define o preenchimento superior/inferior como 9.6rem e o preenchimento esquerdo/direito como 3.2rem */
+  }
+}
+
+/**************************/
+/* ABAIXO DE 944px (Tablets) */
+/**************************/
+
+@media (max-width: 59em) {
+  html {
+    /* 8px / 16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+    gap: 6.4rem;
+  }
+
+  .hero-text-box,
+  .hero-img-box {
+    /* Seleciona as classes 'hero-text-box' e 'hero-img-box' */
+    text-align: center; /* Alinha o texto ao centro */
+  }
+
+  .hero-img {
+    /* Seleciona a classe 'hero-img' */
+    width: 60%; /* Define a largura da imagem do hero como 60% */
+  }
+
+  .delivered-meals {
+    /* Seleciona a classe 'delivered-meals' */
+    justify-content: center; /* Centraliza os elementos horizontalmente */
+    margin-top: 3.2rem; /* Define a margem superior como 3.2rem */
+  }
+
+  .logos img {
+    /* Seleciona as imagens dentro da classe 'logos' */
+    height: 2.4rem; /* Define a altura das imagens como 2.4rem */
+  }
+
+  .step-number {
+    /* Seleciona a classe 'step-number' */
+    font-size: 7.4rem; /* Define o tamanho da fonte como 7.4rem */
+  }
+
+  .meal-content {
+    /* Seleciona a classe 'meal-content' */
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem; /* Define o preenchimento com valores diferentes para cada lado */
+  }
+
+  .section-testimonials {
+    /* Seleciona a classe 'section-testimonials' */
+    grid-template-columns: 1fr; /* Define o grid com uma coluna */
+  }
+
+  .gallery {
+    /* Seleciona a classe 'gallery' */
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* Define o grid com 6 colunas de igual largura */
+  }
+
+  .cta {
+    /* Seleciona a classe 'cta' */
+    /* 3/5 = 60% + 2/5 = 40% */
+    grid-template-columns: 3fr 2fr; /* Define o grid com duas colunas, uma com 3/5 e outra com 2/5 da largura */
+  }
+
+  .cta-form {
+    /* Seleciona a classe 'cta-form' */
+    grid-template-columns: 1fr; /* Define o grid com uma coluna */
+  }
+
+  .btn--form {
+    /* Seleciona a classe 'btn--form' */
+    margin-top: 1.2rem; /* Define a margem superior como 1.2rem */
+  }
+
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    /* Seleciona a classe 'btn-mobile-nav' */
+    display: block; /* Exibe o elemento */
+    z-index: 9999; /* Define a ordem de empilhamento */
+  }
+
+  .main-nav {
+    /* Seleciona a classe 'main-nav' */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Define a cor de fundo com transparência */
+    -webkit-backdrop-filter: blur(
+      5px
+    ); /* Aplica um efeito de desfoque no fundo (para navegadores WebKit) */
+    backdrop-filter: blur(10px); /* Aplica um efeito de desfoque no fundo */
+    position: absolute; /* Define o posicionamento como absoluto */
+    top: 0; /* Define a distância do topo como 0 */
+    left: 0; /* Define a distância da esquerda como 0 */
+    width: 100%; /* Define a largura como 100% */
+    height: 100vh; /* Define a altura como 100% da altura da viewport */
+    transform: translateX(
+      100%
+    ); /* Move o elemento para fora da tela (100% da largura) */
+
+    display: flex; /* Define o tipo de display como flex */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    justify-content: center; /* Alinha os itens horizontalmente ao centro */
+    transition: all 0.5s ease-in; /* Define a transição para todas as propriedades com duração de 0.5s e easing ease-in */
+
+    /* Hide navigation */
+    /* Allows NO transitions at all */
+    /* display: none; */
+
+    /* 1) Hide it visually */
+    opacity: 0; /* Define a opacidade como 0 (invisível) */
+
+    /* 2) Make it unaccessible to mouse and keyboard */
+    pointer-events: none; /* Desativa os eventos de ponteiro (mouse, toque) */
+
+    /* 3) Hide it from screen readers */
+    visibility: hidden; /* Oculta o elemento dos leitores de tela */
+  }
+
+  .nav-open .main-nav {
+    /* Seleciona a classe 'main-nav' quando o elemento pai tem a classe 'nav-open' */
+    opacity: 1; /* Define a opacidade como 1 (visível) */
+    pointer-events: auto; /* Reativa os eventos de ponteiro */
+    visibility: visible; /* Torna o elemento visível */
+    transform: translateX(0); /* Move o elemento para a posição original */
+  }
+
+  .nav-open .icon-mobile-nav[name="close-outline"] {
+    /* Seleciona o ícone de navegação móvel com o nome "close-outline" quando o elemento pai tem a classe 'nav-open' */
+    display: block; /* Exibe o elemento */
+  }
+
+  .nav-open .icon-mobile-nav[name="menu-outline"] {
+    /* Seleciona o ícone de navegação móvel com o nome "menu-outline" quando o elemento pai tem a classe 'nav-open' */
+    display: none; /* Oculta o elemento */
+  }
+
+  .main-nav-list {
+    /* Seleciona a classe 'main-nav-list' */
+    flex-direction: column; /* Define a direção do flex como coluna */
+    gap: 4.8rem; /* Define o espaçamento entre os itens como 4.8rem */
+  }
+
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    /* Seleciona os links da navegação principal (não visitados e visitados) */
+    font-size: 3rem; /* Define o tamanho da fonte como 3rem */
+  }
+}
+
+/**************************/
+/* ABAIXO DE 704px (Tablets menores) */
+/**************************/
+
+@media (max-width: 44em) {
+  /* Aplica estilos quando a largura máxima da tela for 44em (704px) */
+  .grid--3-cols,
+  .grid--4-cols {
+    /* Seleciona as classes 'grid--3-cols' e 'grid--4-cols' */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* Define o grid com 2 colunas de igual largura */
+  }
+
+  .diets {
+    /* Seleciona a classe 'diets' */
+    grid-column: 1 / -1; /* Define a dieta para ocupar todas as colunas */
+    justify-self: center; /* Centraliza o elemento */
+  }
+
+  .heading-secondary {
+    /* Seleciona a classe 'heading-secondary' */
+    margin-bottom: 4.8rem; /* Define a margem inferior como 4.8rem */
+  }
+
+  .pricing-plan {
+    /* Seleciona a classe 'pricing-plan' */
+    width: 100%; /* Define a largura como 100% */
+  }
+
+  .grid--footer {
+    /* Seleciona a classe 'grid--footer' */
+    grid-template-columns: repeat(
+      6,
+      1fr
+    ); /* Define o grid do footer com 6 colunas de igual largura */
+  }
+
+  .logo-col,
+  .address-col {
+    /* Seleciona as classes 'logo-col' e 'address-col' */
+    grid-column: span 3; /* Define para ocupar 3 colunas */
+  }
+
+  .nav-col {
+    /* Seleciona a classe 'nav-col' */
+    grid-row: 1; /* Define a linha do grid como 1 */
+    grid-column: span 2; /* Define para ocupar 2 colunas */
+    margin-bottom: 3.2rem; /* Define a margem inferior como 3.2rem */
+  }
+}
+
+/**************************/
+/* ABAIXO DE 544px (Phones) */
+/**************************/
+
+@media (max-width: 34em) {
+  /* Aplica estilos quando a largura máxima da tela for 34em (544px) */
+  .grid {
+    /* Seleciona a classe 'grid' */
+    row-gap: 4.8rem; /* Define o espaçamento entre as linhas como 4.8rem */
+  }
+
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    /* Seleciona as classes 'grid--2-cols', 'grid--3-cols' e 'grid--4-cols' */
+    grid-template-columns: 1fr; /* Define o grid com uma coluna */
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    /* Seleciona a classe 'btn' e os links visitados e não visitados */
+    padding: 2.4rem 1.6rem; /* Define o preenchimento superior/inferior como 2.4rem e o preenchimento esquerdo/direito como 1.6rem */
+  }
+
+  .section-hero {
+    /* Seleciona a classe 'section-hero' */
+    padding: 2.4rem 0 6.4rem 0; /* Define o preenchimento com valores diferentes para cada lado */
+  }
+
+  .hero {
+    /* Seleciona a classe 'hero' */
+    padding: 0 3.2rem; /* Define o preenchimento superior/inferior como 0 e o preenchimento esquerdo/direito como 3.2rem */
+  }
+
+  .hero-img {
+    /* Seleciona a classe 'hero-img' */
+    width: 80%; /* Define a largura da imagem do hero como 80% */
+  }
+
+  .logos img {
+    /* Seleciona as imagens dentro da classe 'logos' */
+    height: 1.2rem; /* Define a altura das imagens como 1.2rem */
+  }
+
+  .step-img-box:nth-child(2) {
+    /* Seleciona o segundo elemento 'step-img-box' */
+    grid-row: 1; /* Define a linha do grid como 1 */
+  }
+
+  .step-img-box:nth-child(6) {
+    /* Seleciona o sexto elemento 'step-img-box' */
+    grid-row: 5; /* Define a linha do grid como 5 */
+  }
+
+  .step-img-box {
+    /* Seleciona a classe 'step-img-box' */
+    transform: translateY(2.4rem); /* Move o elemento 2.4rem para baixo */
+  }
+
+  .testimonials {
+    /* Seleciona a classe 'testimonials' */
+    grid-template-columns: 1fr; /* Define o grid com uma coluna */
+  }
+
+  .gallery {
+    /* Seleciona a classe 'gallery' */
+    grid-template-columns: repeat(
+      4,
+      1fr
+    ); /* Define o grid com 4 colunas de igual largura */
+    gap: 1.2rem; /* Define o espaçamento entre os elementos como 1.2rem */
+  }
+
+  .cta {
+    /* Seleciona a classe 'cta' */
+    grid-template-columns: 1fr; /* Define o grid com uma coluna */
+  }
+
+  .cta-text-box {
+    /* Seleciona a classe 'cta-text-box' */
+    padding: 3.2rem; /* Define o preenchimento como 3.2rem */
+  }
+
+  .cta-img-box {
+    /* Seleciona a classe 'cta-img-box' */
+    height: 32rem; /* Define a altura como 32rem */
+    grid-row: 1; /* Define a linha do grid como 1 */
+  }
+}
+
+/*
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+/**************************/
+/* Fixing Safari flexbox gap */
+/**************************/
+
+.no-flexbox-gap .main-nav-list li:not(:last-child) {
+  /* Seleciona os itens da lista de navegação principal que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-right: 4.8rem; /* Define a margem direita como 4.8rem */
+}
+
+.no-flexbox-gap .list-item:not(:last-child) {
+  /* Seleciona os itens da lista que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-bottom: 1.6rem; /* Define a margem inferior como 1.6rem */
+}
+
+.no-flexbox-gap .list-icon:not(:last-child) {
+  /* Seleciona os ícones da lista que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-right: 1.6rem; /* Define a margem direita como 1.6rem */
+}
+
+.no-flexbox-gap .delivered-faces {
+  /* Seleciona a classe 'delivered-faces' dentro da classe 'no-flexbox-gap' */
+  margin-right: 1.6rem; /* Define a margem direita como 1.6rem */
+}
+
+.no-flexbox-gap .meal-attribute:not(:last-child) {
+  /* Seleciona os atributos da refeição que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-bottom: 2rem; /* Define a margem inferior como 2rem */
+}
+
+.no-flexbox-gap .meal-icon {
+  /* Seleciona os ícones da refeição dentro da classe 'no-flexbox-gap' */
+  margin-right: 1.6rem; /* Define a margem direita como 1.6rem */
+}
+
+.no-flexbox-gap .footer-row div:not(:last-child) {
+  /* Seleciona as divs dentro da linha do footer que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-right: 6.4rem; /* Define a margem direita como 6.4rem */
+}
+
+.no-flexbox-gap .social-links li:not(:last-child) {
+  /* Seleciona os itens da lista de links sociais que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-right: 2.4rem; /* Define a margem direita como 2.4rem */
+}
+
+.no-flexbox-gap .footer-nav li:not(:last-child) {
+  /* Seleciona os itens da lista de navegação do footer que não são o último filho, dentro da classe 'no-flexbox-gap' */
+  margin-bottom: 2.4rem; /* Define a margem inferior como 2.4rem */
+}
+
+@media (max-width: 75em) {
+  /* Aplica estilos quando a largura máxima da tela for 75em (1200px) */
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    /* Seleciona os itens da lista de navegação principal que não são o último filho, dentro da classe 'no-flexbox-gap' */
+    margin-right: 3.2rem; /* Define a margem direita como 3.2rem */
+  }
+}
+
+@media (max-width: 59em) {
+  /* Aplica estilos quando a largura máxima da tela for 59em (944px) */
+  .no-flexbox-gap .main-nav-list li:not(:last-child) {
+    /* Seleciona os itens da lista de navegação principal que não são o último filho, dentro da classe 'no-flexbox-gap' */
+    margin-right: 0; /* Define a margem direita como 0 */
+    margin-bottom: 4.8rem; /* Define a margem inferior como 4.8rem */
+  }
+}
