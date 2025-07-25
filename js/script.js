@@ -1,15 +1,9 @@
-console.log("Hello world!"); // Imprime "Hello world!" no console
+console.log("Hello world!"); // Imprime "Hello world!"
 
 const myName = "Luiz Guilherme"; // Declara uma constante chamada myName e atribui o valor "Luiz Guilherme"
 const h1 = document.querySelector(".heading-primary"); // Declara uma constante chamada h1 e atribui o elemento com a classe "heading-primary"
 console.log(myName); // Imprime o valor de myName no console
 console.log(h1); // Imprime o elemento h1 no console
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
 
 ///////////////////////////////////////////////////////////
 // Define o ano atual
